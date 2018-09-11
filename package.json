@@ -30,7 +30,7 @@
   "scripts": {
     "webpack": "webpack --mode=development --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "webpack"
+    "postinstall": "webpack --mode=poduction"
   },
   "keywords": [],
   "author": "",
