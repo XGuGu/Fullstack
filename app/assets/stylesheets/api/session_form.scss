@@ -1,0 +1,29 @@
+.session_form{
+  color:black;
+  width: 400px;
+  min-height: 533px;
+  align-self: center;
+  padding-top: 25px;
+  background: white;
+  border: 3px;
+}
+
+.session_background{
+  width: 100%;
+    margin: 0 auto;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  top: 0px;
+  background-color: rgba(95, 115, 160, 0.56);
+    background: url("https://s.pinimg.com/webapp/style/images/bg_multi_case_grid_no_text_white_55_percent-2000ab22.jpg");
+  background-size: cover;
+  // -webkit-animation:200s scroll infinite linear;
+  // -moz-animation:200s scroll infinite linear;
+  // -o-animation:200s scroll infinite linear;
+  // -ms-animation:200s scroll infinite linear;
+  // animation:200s scroll infinite linear;
+}
