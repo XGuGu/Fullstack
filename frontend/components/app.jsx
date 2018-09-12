@@ -16,13 +16,15 @@ import UserShowContainer from './user/user_show_container';
 
 const App = () => {
   return (
-    <div>
-      <header>
-        <h1>Welcome to pindup</h1>
-        <GreetingContainer />
-      </header>
-      <AuthRoute exact path="/login" component={LogInFormContainer} />
-      <AuthRoute exact path="/signup" component={SignUpFormContainer} />
+    <div >
+      <div className="session_background">
+        <header>
+          <h1>Welcome to pindup</h1>
+          <GreetingContainer />
+        </header>
+        <AuthRoute exact path="/login" component={LogInFormContainer} />
+        <AuthRoute exact path="/signup" component={SignUpFormContainer} />
+      </div>
       <Route exact path="/user/:id" component={UserShowContainer} />
     </div>
   );
