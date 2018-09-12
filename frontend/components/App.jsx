@@ -1,28 +1,31 @@
-// import React from 'react';
-// import { Provider } from 'react-redux';
-// import {
-//   Route,
-//   Redirect,
-//   Switch,
-//   Link,
-//   HashRouter
-// } from 'react-router-dom';
-//
-// import SessionBackground from './session_form/session_background';
-// import { AuthRoute, ProtectedRoute} from '../util/route_util';
-// import UserProfileContainer from './user_profile/user_profile_container';
-//
-//
-// const App = () => (
-//   <div className='content'>
-//
-//     <Switch>
-//       <AuthRoute path="/(signup|login)/" component={SessionBackground}/>
-//       <ProtectedRoute exact path="/users/:userId" component={UserProfileContainer}/>
-//       <Redirect to="/"></Redirect>
-//     </Switch>
-//
-//   </div>
-// );
-//
-// export default App;
+import React from 'react';
+import { Provider } from 'react-redux';
+import {
+  Route,
+  Redirect,
+  Switch,
+  Link,
+  HashRouter
+} from 'react-router-dom';
+import GreetingContainer from './greeting/greeting_container';
+import SignUpFormContainer from './session_form/signup_form_container';
+import LogInFormContainer from './session_form/login_form_container';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import UserShowContainer from './user/user_show_container';
+
+
+const App = () => {
+  return (
+    <div>
+      <header>
+        <h1>Welcome to pindup</h1>
+        <GreetingContainer />
+      </header>
+      <AuthRoute exact path="/login" component={LogInFormContainer} />
+      <AuthRoute exact path="/signup" component={SignUpFormContainer} />
+      <Route exact path="/user/:id" component={UserShowContainer} />
+    </div>
+  );
+};
+
+export default App;
