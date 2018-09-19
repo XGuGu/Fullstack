@@ -49,5 +49,30 @@
 }
 
 .boards-and-pins {
+  position: relative;
+  margin-left: 400px;
+  // -webkit-box-pack: center;
+  // justify-content: center;
+  max-width: 800px;
+}
 
+.user-show-pins-button {
+  font-family: sans-serif;
+  text-decoration: none;
+  padding: 15px;
+  color: #8e8e8e;
+  border-radius: 25px;
+}
+
+.user-show-boards-button {
+  font-family: sans-serif;
+  text-decoration: none;
+  padding: 15px;
+  color: #8e8e8e;
+  border-radius: 25px;
+}
+
+.user-show-pins-button:hover, .user-show-boards:hover {
+ background: #F0F0F0;
+ border-radius: 25px;
 }

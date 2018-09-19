@@ -56,10 +56,14 @@ class UserShow extends React.Component{
         <br/>
         <div className="boards-and-pins">
           <div className="boards-container">
-            <Link to={`/users/${this.props.currentId}/boards`} className="board-button">Boards</Link>
+            <Link to={`/users/${this.props.currentId}/boards`} className="board-button">
+              <span className="user-show-boards-button">Boards</span>
+            </Link>
           </div>
           <div className="pins-container">
-            <Link to={`/users/${this.props.currentId}/pins`} className="pin-button">Pins</Link>
+            <Link to={`/users/${this.props.currentId}/pins`} className="pin-button">
+              <span className="user-show-pins-button">Pins</span>
+            </Link>
           </div>
           {currentComponent}
           <div >

@@ -15,7 +15,11 @@
   width: 50px;
 }
 
-
+.board-index-outer {
+  width: 1000px;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
 
 .board-index {
   display: flex;
@@ -35,6 +39,7 @@
   margin-top: 20px;
   margin-left: 12px;
   margin-right: 12px;
+  padding: 8px;
 }
 
 .create-board-img {
@@ -45,6 +50,7 @@
 
 .one-board {
   box-sizing:border-box;
+  padding: 8px;
   margin-bottom: 20px;
   margin-top: 20px;
   margin-left: 12px;
@@ -75,6 +81,6 @@
   color: #333;
   font-weight: 400;
   padding-left: 8px;
-  padding-top: 8px;
+  padding-top: 0px;
   margin: 0px;
 }

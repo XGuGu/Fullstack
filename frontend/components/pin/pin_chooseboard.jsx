@@ -3,6 +3,10 @@ import { Link, withRouter } from 'react-router-dom';
 
 class PinChooseboard extends React.Component {
 
+  constructor(props) {
+    super(props);
+  }
+
   handleclick(boardId) {
     return () => {
       // debugger
@@ -12,11 +16,11 @@ class PinChooseboard extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="pin-chooseboard-form">
         <h1>Choose Board</h1>
         <span className="close-modal" onClick={() => this.props.closeModal()}>X</span>
         <div className="img-ready-to-create">
-          <img src={this.props.pin.url} />
+          <img src={this.props.pin.url} className="pin-chooseboard-img"/>
         </div>
         <div className="create-pin-boards-list">
           <ul>

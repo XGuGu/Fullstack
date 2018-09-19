@@ -22,6 +22,10 @@ class PinIndex extends React.Component {
             <div>
               <Link to={`/pin/${pin.id}`} className="image-show-link">
                 <img src={pin.url} className="one-img" />
+                <br />
+                <button type="submit" onClick={() => this.props.openModal({modal: 'PinChooseboard', pin: pin})} >
+                  save
+                </button>
               </Link>
             </div>
           </div>
