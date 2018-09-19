@@ -1,0 +1,49 @@
+.profile {
+  margin-top: 24px;
+  display:flex;
+  justify-content:center;
+}
+
+.profile-header-wrapper {
+  width: 100%;
+  max-width:800px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile-name {
+  color: black;
+  display: block;
+  font-family: sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  hyphens: auto;
+  letter-spacing: -0.4px;
+  line-height: 43.2px;
+  text-size-adjust: 100%;
+}
+
+.profile-img {
+  height: 106px;
+  width: 106px;
+  cursor: pointer;
+  display: block;
+}
+
+.one-img {
+  zoom: 15%;
+  // display: block;
+  cursor: zoom-in;
+  position: relative;
+
+}
+
+.pins-container {
+  display: block;
+  width: 780px;
+  display: flex;
+  flex-direction: row;
+
+
+}

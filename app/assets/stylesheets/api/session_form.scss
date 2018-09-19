@@ -1,29 +1,126 @@
-.session_form{
-  color:black;
+.login-form-container{
+  // background-color: rbg(256, 256, 256);
+  background: white;
   width: 400px;
   min-height: 533px;
+  border-radius: 8px;
   align-self: center;
-  padding-top: 25px;
-  background: white;
-  border: 3px;
+  padding-top: 10px;
 }
 
 .session_background{
+
+}
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
   width: 100%;
-    margin: 0 auto;
-    height: 800px;
-    display: flex;
-    justify-content: center;
-  overflow: hidden;
+  margin: 0 auto;
+  height: 800px;
+  display: flex;
+  justify-content: center;
   height: 100vh;
   display: flex;
   top: 0px;
-  background-color: rgba(95, 115, 160, 0.56);
-    background: url("https://s.pinimg.com/webapp/style/images/bg_multi_case_grid_no_text_white_55_percent-2000ab22.jpg");
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://s.pinimg.com/webapp/style/images/bg_multi_case_grid_no_text_white_55_percent-2000ab22.jpg");
   background-size: cover;
-  // -webkit-animation:200s scroll infinite linear;
-  // -moz-animation:200s scroll infinite linear;
-  // -o-animation:200s scroll infinite linear;
-  // -ms-animation:200s scroll infinite linear;
-  // animation:200s scroll infinite linear;
+}
+
+.modal-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo{
+  margin: 14px auto 0px;
+  position: relative;
+  height:55px;
+  width:55px;
+}
+
+.svg {
+  height: 50px;
+  width: 50px;
+}
+
+.welcome{
+  font-family: sans-serif;
+  margin: 5px 26px 26px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 28px;
+  color: rgb(51, 51, 51);
+}
+
+.find{
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: rgb(204, 204, 204);
+  font-size: 18px;
+  margin: -25px 26px 20px;
+}
+
+.login-input {
+  display: flex;
+  width: 63%;
+  margin: 5px auto;
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  opacity: .5;
+  font-size: 15px;
+}
+.session-submit {
+  color: white;
+  width: 268px;
+  display: inline-block;
+  border-radius: 4px;
+  margin-left: 65px;
+  padding: 0px 18px;
+  font-size: 15px;
+  font-weight: bold;
+  outline: none;
+  font-family: sans-serif;
+  box-shadow: none;
+  cursor: pointer;
+  margin-top: 0px;
+  background-color: rgb(189, 8, 28);
+  border: 0px;
+  height: 36px;
+}
+
+.or {
+  margin-bottom: 3px;
+  overflow: hidden;
+  text-align:center;
+  color: rgb(51, 51, 51);
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.bottom-button {
+  color: white;
+  width: 268px;
+  display: inline-block;
+  border-radius: 4px;
+  margin-left: 65px;
+  padding: 0px 18px;
+  font-size: 15px;
+  font-weight: bold;
+  outline: none;
+  font-family: sans-serif;
+  box-shadow: none;
+  cursor: pointer;
+  margin-top: 0px;
+  background-color: rgb(66, 103, 178);
+  border: 0px;
+  height: 36px;
 }

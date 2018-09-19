@@ -1,24 +1,31 @@
 import { connect } from 'react-redux';
 import {  Link, withRouter } from 'react-router-dom';
 import UserShow from './user_show';
-import { logout } from '../../actions/session_actions';
+import { requestUser } from '../../actions/user_actions';
+import { requestUserPins } from '../../actions/pin_actions';
+import { requestAllBoards } from '../../actions/board_actions';
 
 
-const mapStateToProps = (state,ownProps) => {
 
-  const user = state.entities.users[ownProps.match.params.id];
+const mapStateToProps = (state, ownProps) => {
+  // debugger
   return {
-    user: user,
+    currentUser: state.entities.users[state.session.id],
+    currentId: state.session.id,
+    boards: Object.values(state.entities.users[ownProps.match.params.id].boards || {}),
+    pins: Object.values(state.entities.users[ownProps.match.params.id].pins || {}),
+    userId: ownProps.match.params.id,
+    path: ownProps.location.pathname,
   };
+
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    logout: () => {
-      dispatch(logout());
-    }
+    requestUser: (id) => dispatch(requestUser(id)),
+    requestUserPins: (id) => dispatch(requestUserPins(id)),
+    requestAllBoards: () => dispatch(requestAllBoards()),
   };
 };
 
-export default
-withRouter(connect(mapStateToProps, mapDispatchToProps)(UserShow));
+export default connect(mapStateToProps, mapDispatchToProps)(UserShow);

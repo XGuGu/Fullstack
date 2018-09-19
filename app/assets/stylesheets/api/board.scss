@@ -1,0 +1,16 @@
+.board-one-img {
+  zoom: 15%;
+  cursor: zoom-in;
+}
+
+.board-pins-wrap {
+  display: flex;
+  max-width: 780px;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.board-author-icon {
+  height: 50px;
+  width: 50px;
+}

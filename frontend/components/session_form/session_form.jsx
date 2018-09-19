@@ -27,19 +27,76 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.processForm(Object.assign({}, this.state));
+    const user = Object.assign({}, this.state);
+    this.props.processForm(user).then(this.props.closeModal);
+
+  }
+
+  renderErrors() {
+    return(
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
   }
 
   render() {
+    let message;
+    let holder;
+    let button;
+    let button2
+    if (this.props.formType === 'signup') {
+      holder = "Create a password";
+      message = "Already a member?";
+      button = "Log in";
+      button2 = "Sign up";
+    }
+    else {
+      holder = "Password";
+      message = "Not a member?";
+      button = "Sign up"
+      button2 = "Continue";
+    }
+
     return (
-      <div className="session_background">
-        <div className="session_form">
-          <form onSubmit={this.handleSubmit}>
-            <input type='text' value={this.state.username} onChange={this.update('username')} />
-            <input type='text' value={this.state.password} onChange={this.update('password')} />
-            <button>{this.props.formType}</button>
-          </form>
-        </div>
+      <div className = "modal-page">
+      <div className="login-form-container">
+        <form onSubmit={this.handleSubmit} className="login-form-box">
+          <div className="logo">
+            <img src={window.logo} className="svg"/>
+          </div>
+          <div>
+            <div className="welcome">Welcome to Pindup</div>
+            <div className="find">Find new ideas to try</div>
+          </div>
+
+          <div className="login-form">
+              <input type="text"
+                value={this.state.username}
+                onChange={this.update('username')}
+                className="login-input"
+                placeholder="Username"
+              />
+            <br/>
+              <input type="password"
+                value={this.state.password}
+                onChange={this.update('password')}
+                className="login-input"
+                placeholder={holder}
+              />
+            <br/>
+            <input className="session-submit" type="submit" value={button2} />
+          </div>
+           <p className="or">OR</p>
+           <br/>  
+          <button className="bottom-button" onClick={this.props.switchModal}>{button}</button>
+        </form>
+        <div className="errors">{this.renderErrors()}</div>
+      </div>
       </div>
     );
   }
