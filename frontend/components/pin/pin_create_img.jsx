@@ -55,7 +55,7 @@ class PinCreate extends React.Component {
 
           <label>
             <span>Description</span>
-            <textarea onChange={this.update('description').bind(this)}>{this.state.description}</textarea>
+            <textarea onChange={this.update('description').bind(this)} value={this.state.description} />
           </label>
 
           <div className="done-button">

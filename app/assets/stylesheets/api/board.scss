@@ -14,3 +14,67 @@
   height: 50px;
   width: 50px;
 }
+
+
+
+.board-index {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: sans-serif;
+}
+
+.sub-boards {
+  display: flex;
+  flex-wrap:wrap;
+}
+
+.board-index-create-broad {
+  height: 245px;
+  width: 300px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.create-board-img {
+  width: 300px;
+  height: 242px;
+  cursor: pointer;
+}
+
+.one-board {
+  box-sizing:border-box;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 12px;
+  margin-right: 12px;
+  height: 245px;
+  width: 300px;
+  cursor: pointer;
+}
+
+.one-board-img {
+  height: 200px;
+  width: 300px;
+}
+
+.board-index-one-board-name {
+  font-size:21px;
+  color: #333;
+  line-height: 1.2;
+  font-weight: 700px;
+  padding-left: 8px;
+  padding-top: 8px;
+  text-decoration: none;
+  margin: 0px;
+}
+
+.board-index-one-board-pincount {
+  font-size:14px;
+  color: #333;
+  font-weight: 400;
+  padding-left: 8px;
+  padding-top: 8px;
+  margin: 0px;
+}

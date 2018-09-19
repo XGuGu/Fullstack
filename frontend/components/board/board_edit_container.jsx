@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import { openModal } from '../../actions/modal_board_edit_actions';
-import { closeModal } from '../../actions/modal_board_edit_actions';
+import { openModal } from '../../actions/modal2_actions';
+import { closeModal } from '../../actions/modal2_actions';
 import BoardEdit from './board_edit';
 import { updateBoard, receiveBoardErrors, deleteBoard } from '../../actions/board_actions';
 import { Link, withRouter } from 'react-router-dom';

@@ -1,7 +1,7 @@
 import BoardShow from './board_show';
 import { connect } from 'react-redux';
 import { requestBoard } from '../../actions/board_actions';
-import { openModal } from '../../actions/modal_board_edit_actions'
+import { openModal } from '../../actions/modal2_actions'
 
 const mapStateToProps = (state, ownProps) => {
   // debugger

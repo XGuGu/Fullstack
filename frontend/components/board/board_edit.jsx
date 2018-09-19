@@ -44,7 +44,7 @@ update(e){
   }
 
   handleclick(e){
-    this.props.deleteBoard(this.state.id).then(this.props.history.goBack());
+    this.props.deleteBoard(this.state.id).then(this.props.history.goBack);
   }
 
   render(){

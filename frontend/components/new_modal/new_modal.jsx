@@ -32,7 +32,7 @@ const Modal = (props) => {
   }
 
   let modalStyle;
-  if(props.modal === 'CreatePeg' || props.modal === 'CreateBoard'){
+  if(props.modal === 'CreatePin' || props.modal === 'CreateBoard'){
     modalStyle = {background: `linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5) )`};
   } else {
     modalStyle = {background: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) )`};

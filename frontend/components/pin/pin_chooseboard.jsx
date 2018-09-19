@@ -20,8 +20,8 @@ class PinChooseboard extends React.Component {
         </div>
         <div className="create-pin-boards-list">
           <ul>
-            {this.props.boards.map(board =>
-              <li>
+            {this.props.boards.map((board, idx) =>
+              <li key={idx}>
                 <input type="submit" value={board.board_name} onClick={this.handleclick(board.id)} />
               </li>
             )}
