@@ -9,6 +9,12 @@ import { requestAllBoards } from '../../actions/board_actions';
 
 const mapStateToProps = (state, ownProps) => {
   // debugger
+  if (!state.entities.users[ownProps.match.params.id]) {
+    return {
+      loading: true,
+      userId: ownProps.match.params.id,
+    };
+  }
   return {
     currentUser: state.entities.users[state.session.id],
     currentId: state.session.id,
@@ -16,6 +22,7 @@ const mapStateToProps = (state, ownProps) => {
     pins: Object.values(state.entities.users[ownProps.match.params.id].pins || {}),
     userId: ownProps.match.params.id,
     path: ownProps.location.pathname,
+    currentProfile: state.entities.users[ownProps.match.params.id],
   };
 
 };

@@ -17,10 +17,23 @@ const mapStateToProps = (state, ownProps) => {
   } else {
     pinLike = 0;
   }
+  let author_id;
+  if (state.entities.pins[ownProps.match.params.pinId]) {
+    author_id = state.entities.pins[ownProps.match.params.pinId].author_id;
+  } else {
+    author_id = 0;
+  }
+  let author;
+  if (state.entities.pins[ownProps.match.params.pinId]) {
+    author = state.entities.pins[ownProps.match.params.pinId].author.username;
+  } else {
+    return {loading: true}
+  }
   return {
-    pinId: ownProps.match.params.pinId,
     url: imgUrl,
     likes: pinLike,
+    author_id: author_id,
+    author: author,
   };
 };
 

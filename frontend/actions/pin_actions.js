@@ -39,6 +39,7 @@ export const requestUserPins = (userId) => (dispatch) => {
 };
 
 export const requestPin = (id) => (dispatch) => {
+  // debugger
   return PinAPIUtil.fetchPin(id).then(response => dispatch(receivePin(response)));
 };
 

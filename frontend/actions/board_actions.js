@@ -35,6 +35,11 @@ export const requestAllBoards = ()  => (dispatch) => {
   .then(response => dispatch(receiveBoards(response)));
 };
 
+export const requestUserBoards = (userId) => (dispatch) => {
+  return BoardAPIUtil.fetchBoards(userId)
+  .then(response => dispatch(receiveBoards(response)));
+};
+
 export const requestBoard = (id) => (dispatch) => {
   return BoardAPIUtil.fetchBoard(id)
   .then(response => dispatch(receiveBoard(response)));

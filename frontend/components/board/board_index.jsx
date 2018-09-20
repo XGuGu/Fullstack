@@ -9,16 +9,31 @@ class BoardIndex extends React.Component {
     // debugger
   }
 
+  componentDidMount() {
+    // debugger
+    this.props.requestUserBoards(this.props.currentId);
+    this.props.requestUser(this.props.currentId);
+  }
+
+
   render() {
     // debugger
+    let createboard;
+    if (this.props.currentId != this.props.currentSession) {
+      createboard = (<div></div>);
+    } else {
+      createboard = (
+        <div className="board-index-create-broad"
+          onClick={() => this.props.openModal({modal: 'CreateBoard'} )}>
+          <img src={window.create_board} className="create-board-img"/>
+        </div>
+      );
+    }
     return (
       <div className="board-index-outer">
         <div className="board-index">
           <div className="sub-boards">
-            <div className="board-index-create-broad"
-              onClick={() => this.props.openModal({modal: 'CreateBoard'} )}>
-              <img src={window.create_board} className="create-board-img"/>
-            </div>
+            {createboard}
 
             {this.props.boards.map((board, idx)=>
               <div className="one-board" key={idx}>

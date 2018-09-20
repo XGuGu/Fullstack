@@ -8,7 +8,7 @@ class PinShow extends React.Component {
 
   componentDidMount(){
     // debugger
-    this.props.requestPin(this.props.pinId);
+    this.props.requestPin(this.props.match.params.pinId);
   }
 
   render() {
@@ -19,6 +19,7 @@ class PinShow extends React.Component {
         <button onClick={this.props.history.goBack}>Go Back</button>
         <img src={this.props.url} className="pin-show-img"></img>
         <div className="pin-show-likes">likes: {this.props.likes}</div>
+        <Link to={`/users/${this.props.author_id}`}> {this.props.author} created</Link>
       </div>
     );
   }

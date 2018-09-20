@@ -1,7 +1,10 @@
-export const fetchBoards = () => {
+export const fetchBoards = (userId) => {
   return $.ajax({
     method: 'GET',
-    url: '/api/boards'
+    url: '/api/boards',
+    data: {
+      userId
+    }
   });
 };
 

@@ -7,15 +7,28 @@ class PinIndex extends React.Component {
     // debugger
   }
 
+  componentDidMount() {
+    this.props.requestUserPins(this.props.userId);
+    this.props.requestUserBoards(this.props.currentId);
+  }
+
 
   render() {
-    return (
-      <div className="pins-wrap">
-
-        <div className="board-index-create-broad"
+    let createpin;
+    if (this.props.currentId != this.props.userId) {
+      createpin = (<div className="pin-index-create-broad"></div>);
+    } else {
+      createpin = (
+        <div className="pin-index-create-broad"
           onClick={() => this.props.openModal({modal: 'CreatePin'} )}>
           create
         </div>
+      );
+    }
+    return (
+      <div className="pins-wrap">
+
+        {createpin}
 
         {this.props.pins.map((pin, idx)=>
           <div className="index-image" key={idx} >
@@ -23,10 +36,10 @@ class PinIndex extends React.Component {
               <Link to={`/pin/${pin.id}`} className="image-show-link">
                 <img src={pin.url} className="one-img" />
                 <br />
-                <button type="submit" onClick={() => this.props.openModal({modal: 'PinChooseboard', pin: pin})} >
-                  save
-                </button>
               </Link>
+              <button type="submit" onClick={() => this.props.openModal({modal: 'PinChooseboard', pin: pin})} >
+                save
+              </button>
             </div>
           </div>
           )}
