@@ -17,19 +17,27 @@ class PinChooseboard extends React.Component {
   render() {
     return (
       <div className="pin-chooseboard-form">
-        <h1>Choose Board</h1>
-        <span className="close-modal" onClick={() => this.props.closeModal()}>X</span>
-        <div className="img-ready-to-create">
-          <img src={this.props.pin.url} className="pin-chooseboard-img"/>
+        <div className="pin-chooseboard-first-line">
+          <h1 className="pin-chooseboard-words">Choose board</h1>
+          <span className="pin-chooseboard-close-modal" onClick={() => this.props.closeModal()}>X</span>
         </div>
-        <div className="create-pin-boards-list">
-          <ul>
-            {this.props.boards.map((board, idx) =>
-              <li key={idx}>
-                <input type="submit" value={board.board_name} onClick={this.handleclick(board.id)} />
-              </li>
-            )}
-          </ul>
+        <div className="pin-chooseboard-line"></div>
+        <div className="pin-choose-second-part">
+          <div className="img-ready-to-create">
+            <img src={this.props.pin.url} className="pin-chooseboard-img"/>
+          </div>
+          <div className="create-pin-boards-list">
+            <div className="pin-chooseboard-board-selection">
+              {this.props.boards.map((board, idx) =>
+                <div className="pin-chooseboard-one-board" key={idx}>
+                  <input type="submit"
+                    value={board.board_name}
+                    className="pin-chooseboard-the-board"
+                    onClick={this.handleclick(board.id)} />
+                </div>
+              )}
+            </div>
+          </div>
         </div>
       </div>
     );

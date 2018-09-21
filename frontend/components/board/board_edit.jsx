@@ -49,22 +49,27 @@ update(e){
 
   render(){
     return (
-      <div>
-      <form onSubmit={this.handleSubmit.bind(this)} className="edit-board-form">
-
-        <h3 className="edit-board-title">Edit Board</h3>
-        <br/>
-        <div className="board-edit-errors">{this.renderErrors()}</div>
-        <span className="close-modal" onClick={() => this.props.closeModal()}>X</span>
-        <label className="boardtitle1">
-          <span>Name</span>
-          <input type="text" required value={this.state.board_name} onChange={this.update.bind(this)}/>
-        </label>
-        <div className="submitouterdiv">
-          <input className="board-update-button" type="submit" value='Update' />
+      <div className="edit-board-form">
+      <form onSubmit={this.handleSubmit.bind(this)} >
+        <div className="edit-board-first-line">
+          <h1 className="edit-board-words">Edit Board</h1>
+          <span className="edit-board-close-modal" onClick={() => this.props.closeModal()}>X</span>
         </div>
-        <button className="submit-cancel-button1" onClick={() => this.props.closeModal()}>Cancel</button>
-        <button onClick={this.handleclick} className="submit-delete-button12">Delete</button>
+        <div className="edit-board-line"></div>
+        <label className="edit-board-name-label">
+          <span className="edit-board-name">Name</span>
+          <input type="text"
+            className="edit-board-name-text"
+            required value={this.state.board_name}
+            placeholder="Like 'Places to Go' or 'Recipes to Make' "
+            onChange={this.update.bind(this)}/>
+        </label>
+        <div className="edit-board-line2"></div>
+        <br />
+        <button onClick={this.handleclick} className="board-edit-delete-button">Delete</button>
+        <button className="board-edit-cancel-button" onClick={() => this.props.closeModal()}>Cancel</button>
+        <input className="board-edit-save-button" type="submit" value='Save' />
+        <div className="board-edit-errors">{this.renderErrors()}</div>
         </form>
       </div>
 

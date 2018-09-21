@@ -1,0 +1,51 @@
+.board-edit-img {
+  width:24px;
+  height: 24px;
+  padding: 15px;
+  cursor: pointer;
+  margin-top: 38px;
+  margin-left: 20px;
+}
+
+.board-edit-img:hover {
+  background: #F0F0F0;
+  border-radius: 25px;
+}
+
+.board-show-title {
+  padding-top: 50px;
+  display: flex;
+  width: 100%;
+  max-width: 800px;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 400px;
+  font-family: sans-serif;
+}
+
+.board-show-name-and-edit {
+  display: flex;
+  width:50%;
+}
+
+.board-show-icon {
+  position: relative;
+  right: 100px;
+}
+
+.board-show-name {
+  font-size: 48px;
+}
+
+.board-show-pincount {
+  color: #8e8e8e;
+  font-size: 14px;
+  font-weight: 400;
+  position:relative;
+  bottom: 25px;
+  left:1px;
+}
+
+.board-pins-wrap {
+  margin-left: 30px;
+}

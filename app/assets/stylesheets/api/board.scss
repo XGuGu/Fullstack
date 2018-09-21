@@ -4,10 +4,10 @@
 }
 
 .board-pins-wrap {
-  display: flex;
-  max-width: 780px;
-  flex-wrap: wrap;
-  flex-direction: row;
+  // display: flex;
+  // max-width: 780px;
+  // flex-wrap: wrap;
+  // flex-direction: row;
 }
 
 .board-author-icon {
@@ -16,7 +16,7 @@
 }
 
 .board-index-outer {
-  width: 1000px;
+  width: 100%;
   -webkit-box-pack: center;
   justify-content: center;
 }
@@ -25,6 +25,7 @@
   display: flex;
   flex-wrap: wrap;
   font-family: sans-serif;
+  margin-left: 50px;
 }
 
 .sub-boards {
@@ -33,7 +34,7 @@
 }
 
 .board-index-create-broad {
-  height: 245px;
+  // height: 245px;
   width: 300px;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -83,4 +84,8 @@
   padding-left: 8px;
   padding-top: 0px;
   margin: 0px;
+}
+
+.board-index-one-board-link {
+  text-decoration: none;
 }

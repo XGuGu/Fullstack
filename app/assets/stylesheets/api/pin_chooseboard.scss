@@ -1,10 +1,84 @@
-.pin-chooseboard-img {
-  zoom: 50%;
-}
 
 .pin-chooseboard-form {
   width: 804px;
   height: 531px;
   background: white;
-  border-radius: 10px;
+  border-radius: 6px;
+  font-family: sans-serif;
+}
+
+.pin-chooseboard-first-line {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.pin-chooseboard-words {
+  font-size: 24px;
+  color: #333;
+  position:relative;
+  left: 300px;
+}
+
+.pin-chooseboard-close-modal {
+  cursor: pointer;
+  color: grey;
+  font-weight: bold;
+  font-size: 25px;
+  position: relative;
+  top:15px;
+}
+
+.pin-chooseboard-line {
+  border-top: 1px solid #efefef;
+}
+
+.pin-choose-second-part {
+  display: flex;
+}
+
+.img-ready-to-create {
+    // width: 50%;
+    width: 50%;
+    height: 500px;
+    // display: relative;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    top: 50px;
+    // border-right: 1px solid #efefef;
+}
+
+.create-pin-boards-list {
+  border-left: 1px solid #efefef;
+  height: 470px;
+}
+
+.pin-chooseboard-img {
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.pin-chooseboard-board-selection {
+  margin-top: 20px;
+}
+
+.pin-chooseboard-the-board {
+  border: 0;
+  background-color: white;
+  cursor: pointer;
+  height: 40px;
+  width: 400px;
+  font-family: sans-serif;
+  font-size: 16px;
+  text-overflow: ellipsis;
+  color: #333;
+  font-weight: 700;
+}
+
+.pin-chooseboard-the-board:hover {
+  background-color: #efefef;
+  // border-rad
 }

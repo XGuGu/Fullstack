@@ -6,13 +6,16 @@
 
 .profile-header-wrapper {
   width: 100%;
-  max-width:800px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-left: 950px;
+  padding-right: 950px;
+  margin-left:50px;
 }
 
 .profile-name {
+  width: 350px;
   color: black;
   display: block;
   font-family: sans-serif;
@@ -22,7 +25,11 @@
   letter-spacing: -0.4px;
   line-height: 43.2px;
   text-size-adjust: 100%;
-  margin-left: 100px;
+  margin-left: 0px;
+}
+
+.user-show-user-icon {
+  margin-right: 0px;
 }
 
 .profile-img {
@@ -30,7 +37,7 @@
   width: 106px;
   cursor: pointer;
   display: block;
-  margin-right: 100px;
+  margin-right: 0px;
 }
 
 .one-img {
@@ -72,7 +79,24 @@
   border-radius: 25px;
 }
 
-.user-show-pins-button:hover, .user-show-boards:hover {
+.user-show-pins-button:hover, .user-show-boards-button:hover {
  background: #F0F0F0;
  border-radius: 25px;
+ color: #333;
+ text-decoration: underline;
+}
+
+.user-show-toggles {
+  display: flex;
+  font-size: 16px;
+  color: #333;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: left;
+  position: relative;
+  right: 10px;
+}
+
+.board-button, .pin-button {
+  text-decoration: none;
 }

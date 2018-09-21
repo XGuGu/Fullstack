@@ -35,16 +35,25 @@ class BoardCreate extends React.Component {
 
   render(){
     return (
-      <div>
+      <div className="create-board-form">
         <form id="create-board" onSubmit={this.handleSubmit.bind(this)}>
-          <h1>Create Board</h1>
-          <span className="close-modal" onClick={() => this.props.closeModal()}>X</span>
-          <label className="board_name-label">
-            <span>Name</span>
-            <input type="text" required value={this.state.board_name} onChange={this.update.bind(this)}/>
+          <div className="create-board-first-line">
+            <h1 className="create-board-words">Create Board</h1>
+            <span className="create-board-close-modal" onClick={() => this.props.closeModal()}>X</span>
+          </div>
+          <div className="create-board-line"></div>
+          <label className="create-board-name-label">
+            <span className="create-board-name">Name</span>
+            <input type="text"
+              className="create-board-name-text"
+              placeholder="Like 'Places to Go' or 'Recipes to Make' "
+              required value={this.state.board_name}
+              onChange={this.update.bind(this)}/>
           </label>
-          <input className="create-button" type="submit" value='Create' />
-          <button className="cancel-button" onClick={() => this.props.closeModal()}>Cancel</button>
+          <div className="create-board-line2"></div>
+          <br />
+          <button className="board-create-cancel-button" onClick={() => this.props.closeModal()}>Cancel</button>
+          <input className="board-create-create-button" type="submit" value='Create' />
           <div className="board-create-errors">{this.renderErrors()}</div>
         </form>
       </div>

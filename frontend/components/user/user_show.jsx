@@ -64,24 +64,29 @@ class UserShow extends React.Component{
         <div className="profile">
           <div className="profile-header-wrapper">
             <div className="profile-name">
-              <h4>{username}</h4>
-              <div className="boards-container">
-                <Link to={`/users/${this.props.userId}/boards`} className="board-button">
-                  <span className="user-show-boards-button">Boards</span>
-                </Link>
+              <div>
+                <h4>{username}</h4>
+                <div className="user-show-toggles">
+                  <div className="boards-container">
+                    <Link to={`/users/${this.props.userId}/boards`} className="board-button">
+                      <span className="user-show-boards-button">Boards</span>
+                    </Link>
+                  </div>
+                  <div className="pins-container">
+                    <Link to={`/users/${this.props.userId}/pins`} className="pin-button">
+                      <span className="user-show-pins-button">Pins</span>
+                    </Link>
+                  </div>
+                </div>
               </div>
-              <div className="pins-container">
-                <Link to={`/users/${this.props.userId}/pins`} className="pin-button">
-                  <span className="user-show-pins-button">Pins</span>
-                </Link>
-              </div>
+
             </div>
-            <div >
+            <div className="user-show-user-icon">
               <img className="profile-img" src={this.props.currentProfile.image_url} />
             </div>
           </div>
         </div>
-        <br/>
+
         {currentComponent}
       </div>
     );

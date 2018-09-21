@@ -1,0 +1,116 @@
+.pin-create-img-form {
+  width: 804px;
+  height: 531px;
+  background: white;
+  border-radius: 6px;
+  font-family: sans-serif;
+}
+
+.pin-create-img-first-line {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.pin-create-img-words {
+  font-size: 24px;
+  color: #333;
+  position:relative;
+  left: 300px;
+}
+
+.pin-create-img-close-modal {
+  cursor: pointer;
+  color: grey;
+  font-weight: bold;
+  font-size: 25px;
+  position: relative;
+  top:15px;
+}
+
+.pin-create-img-line {
+  border-top: 1px solid #efefef;
+}
+
+.pin-create-second-part {
+  display: flex;
+}
+
+.dropzone {
+  width: 50%;
+  height: 500px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  top: 50px;
+}
+
+.pin-create-info {
+  width: 50%;
+  display: block;
+}
+
+.pin-create-website {
+  width: 400px;
+  height: 80px;
+  display: flex;
+  align-content: center;
+}
+
+.pin-create-website-text {
+  font-size: 14px;
+  width: 25%;
+  font-weight: 400;
+  position: relative;
+  top: 52px;
+  right: 50px;
+}
+
+.pin-create-website-whole-link{
+  display: flex;
+  width: 350px;
+  margin: 5px auto;
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  opacity: .5;
+  font-size: 15px;
+  position: relative;
+  top: 52px;
+  right: 50px;
+}
+
+.pin-create-description {
+  resize: none;
+  display: flex;
+  width: 350px;
+  height: 120px;
+  margin: 5px auto;
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  opacity: .5;
+  font-size: 15px;
+  position: relative;
+  top: 52px;
+  right: 50px;
+}
+
+.pin-create-done-button {
+  border: 0;
+  background-color: #efefef;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 40px;
+  width:64px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: sans-serif;
+  width: 80px;
+  position: relative;
+  bottom: 80px;
+  left: 710px;
+}

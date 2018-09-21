@@ -37,7 +37,7 @@ class BoardIndex extends React.Component {
 
             {this.props.boards.map((board, idx)=>
               <div className="one-board" key={idx}>
-                <Link to={`/users/${this.props.currentId}/boards/${board.id}`}>
+                <Link to={`/users/${this.props.currentId}/boards/${board.id}`} className="board-index-one-board-link">
                   <img src={window.new_board} className="one-board-img"/>
                   <p className="board-index-one-board-name">{board.board_name}</p>
                   <p className="board-index-one-board-pincount">{board.pincount} Pins</p>

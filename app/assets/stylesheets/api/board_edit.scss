@@ -1,0 +1,109 @@
+.edit-board-form {
+  width:600px;
+  border-radius: 6px;
+  font-family: sans-serif;
+  color: #211922;
+  max-width: 600px;
+  background-color: #fff;
+  height: 218px;
+}
+
+.edit-board-first-line{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.edit-board-words {
+  font-size: 24px;
+  color: #333;
+}
+
+.edit-board-close-modal {
+  cursor: pointer;
+  color: grey;
+  font-weight: bold;
+  font-size: 25px;
+  position: relative;
+  top:15px;
+}
+
+.edit-board-line {
+  border-top: 1px solid #efefef;
+}
+
+.edit-board-name-label {
+  align-items: center;
+}
+
+.edit-board-name {
+  font-size: 14px;
+  width: 25%;
+  font-weight: 400;
+  position: relative;
+  top: 35px;
+  left:20px;
+}
+
+.edit-board-name-text {
+  display: flex;
+  width: 75%;
+  margin: 5px auto;
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  opacity: .5;
+  font-size: 15px;
+  position: relative;
+  left: 50px;
+}
+
+.edit-board-line2 {
+  margin-top: 20px;
+  border-top: 1px solid #efefef;
+}
+
+
+.board-edit-cancel-button, .board-edit-delete-button {
+  border: 0;
+  background-color: #efefef;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 40px;
+  width:64px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: sans-serif;
+  width: 80px;
+  position: relative;
+}
+
+.board-edit-save-button {
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: sans-serif;
+  background-color: #bd081c;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 40px;
+  width:64px;
+  position: relative;
+}
+
+.board-edit-save-button {
+  left: 360px;
+}
+
+.board-edit-cancel-button {
+  left: 345px;
+}
+
+.board-edit-delete-button {
+  left: 14px;
+}

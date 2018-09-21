@@ -5,29 +5,35 @@ import { openModal } from '../../actions/modal2_actions'
 
 const mapStateToProps = (state, ownProps) => {
   // debugger
-  let pins_in_board
+  let pins_in_board;
   if (state.entities.boards[ownProps.match.params.boardId]) {
     pins_in_board = Object.values(state.entities.boards[ownProps.match.params.boardId].pins_belongs_to_this_board);
   } else {
     pins_in_board = [];
   }
-  let user_icon
+  let user_icon;
   if (state.entities.boards[ownProps.match.params.boardId]) {
     user_icon = state.entities.boards[ownProps.match.params.boardId].board_author_icon;
   } else {
     user_icon = "";
   }
-  let board_name
+  let board_name;
   if (state.entities.boards[ownProps.match.params.boardId]) {
     board_name = state.entities.boards[ownProps.match.params.boardId].board_name;
   } else {
     board_name = "";
   }
-  let pincount
+  let pincount;
   if (state.entities.boards[ownProps.match.params.boardId]) {
     pincount = state.entities.boards[ownProps.match.params.boardId].pincount;
   } else {
     pincount = 0;
+  }
+  let user_id;
+  if (state.entities.boards[ownProps.match.params.boardId]) {
+    user_id = state.entities.boards[ownProps.match.params.boardId].user_id;
+  } else {
+    user_id = 0;
   }
   return {
     currentBoardId: ownProps.match.params.boardId,
@@ -35,6 +41,8 @@ const mapStateToProps = (state, ownProps) => {
     board_author_icon: user_icon,
     board_name: board_name,
     pincount: pincount,
+    author_id: user_id,
+    currentId: state.session.id,
   };
 }
 

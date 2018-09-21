@@ -1,6 +1,41 @@
 .pins-wrap {
-  display:  flex;
-  max-width:  780px;
-  flex-wrap: wrap;
-  flex-direction: row;
+  // display:  flex;
+  // max-width:  780px;
+  // flex-wrap: wrap;
+  // flex-direction: row;
 }
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 6px 6px;
+}
+
+.column {
+  flex: 18%;
+  max-width: 18%;
+  padding: 10px 10px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.pin-index-one-img:hover{
+ background: #F0F0F0;
+ border-radius: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+// .pin-index-one-img {
+//   zoom: 15%;
+// }

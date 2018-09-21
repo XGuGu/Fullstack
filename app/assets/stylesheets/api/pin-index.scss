@@ -1,0 +1,39 @@
+.pin-index-save-button {
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: sans-serif;
+  background-color: #bd081c;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 40px;
+  width:64px;
+  position: relative;
+}
+
+.create-pin-img {
+  width: 256px;
+  // height: 290px;
+  cursor: pointer;
+}
+.create-pin-img:hover {
+
+}
+
+.pin-index-save-button:hover {
+  opacity: 1;
+}
+
+.index-image {
+  position: relative;
+}
+
+.pin-index-save-button {
+  position: absolute;
+  top: 25px;
+  right: 5px;
+  opacity:0
+}

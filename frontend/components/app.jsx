@@ -27,10 +27,12 @@ const App = () => {
     <div >
       <Modal />
       <NewModal />
-      <ProtectedRoute path="/" component={NavBarContainer}/>
+      <Switch>
+        <Route exact path="/pin/:pinId" component={PinShowContainer} />
+        <ProtectedRoute path="/" component={NavBarContainer}/>
+      </Switch>
       <Switch>
         <ProtectedRoute exact path="/" component={PinIndexContainer} />
-        <Route exact path="/pin/:pinId" component={PinShowContainer} />
         <Route exact path="/users/:id/boards/:boardId" component={BoardShowContainer} />
         <ProtectedRoute path="/users/:id" component={UserShowContainer} />
       </Switch>
