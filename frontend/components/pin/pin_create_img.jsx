@@ -60,8 +60,8 @@ class PinCreate extends React.Component {
 
   handleSubmit(e){
     e.stopPropagation();
-    // debugger
     e.preventDefault();
+    // debugger
     this.props.openModal({modal: 'PinChooseboard', pin: this.state});
   }
 

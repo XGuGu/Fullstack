@@ -7,6 +7,7 @@ import { Link, withRouter } from 'react-router-dom';
 
 const mapStateToProps = (state, ownProps) => {
   // debugger
+  // want props.match.params.boardId
   return {
     board: state.entities.boards[ownProps.location.pathname.slice(17)],
     errors: state.errors.boards,
@@ -23,4 +24,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default withRouter (connect(mapStateToProps, mapDispatchToProps)(BoardEdit));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(BoardEdit));

@@ -19,6 +19,7 @@ const Modal = (props) => {
       component = <BoardCreateContainer />;
       break;
     case "EditBoard":
+      debugger 
       component = <BoardEditContainer board={props.modal.board}/>;
       break;
     case "CreatePin":
