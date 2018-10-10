@@ -37,13 +37,23 @@
   display: flex;
 }
 
+.dropzone {
+  width: 50%;
+  height: 500px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  top: 50px;
+}
+
 .pin-create-info {
-  width: 100%;
+  width: 50%;
   display: block;
 }
 
 .pin-create-website {
-  width: 300px;
+  width: 400px;
   height: 80px;
   display: flex;
   align-content: center;
@@ -54,7 +64,8 @@
   width: 25%;
   font-weight: 400;
   position: relative;
-  left: 50px;
+  top: 52px;
+  right: 50px;
 }
 
 .pin-create-website-whole-link{
@@ -67,7 +78,8 @@
   opacity: .5;
   font-size: 15px;
   position: relative;
-  left: 50px;
+  top: 52px;
+  right: 50px;
 }
 
 .pin-create-description {
@@ -82,7 +94,8 @@
   opacity: .5;
   font-size: 15px;
   position: relative;
-  left: 50px;
+  top: 52px;
+  right: 50px;
 }
 
 .pin-create-done-button {

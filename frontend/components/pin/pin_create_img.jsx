@@ -1,5 +1,9 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import ReactDropzone from 'react-dropzone';
+import request from 'superagent';
+
+
 
 class PinCreate extends React.Component {
   constructor(props) {
@@ -9,6 +13,43 @@ class PinCreate extends React.Component {
       description: '',
       website_url: '',
     }
+    this.onDrop = this.onDrop.bind(this);
+  }
+
+  onDrop(image){
+    let req = request.post("https://api.cloudinary.com/v1_1/archhere/image/upload")
+    .field('upload_preset', "zselilmq")
+    .field('file', image);
+    // debugger
+
+    req.end((err, response) => {
+      if (err) {
+        this.setState({
+          url: "https://data.whicdn.com/images/167083528/large.jpg"
+        })
+      }
+      if (response.body.secure_url !== '') {
+        this.setState({
+          url: response.body.secure_url
+        });
+      }
+    });
+  }
+
+  preview(){
+    if (this.state.url === '') {
+      return (
+        <div className="picturethumbnail">
+          <img width="232" className="imgthumbnail" src={window.dropzone} />
+        </div>
+      );
+      } else {
+        return (
+          <div className="picturethumbnail">
+            <img width="232" className="imgthumbnail" src={this.state.url}/>
+          </div>
+        );
+      }
   }
 
   update(type) {
@@ -33,17 +74,11 @@ class PinCreate extends React.Component {
         </div>
         <div className="pin-create-img-line"></div>
         <div className="pin-create-second-part">
+          <ReactDropzone
+            onDrop={this.onDrop} className="dropzone" >
+            {this.preview()}
+          </ReactDropzone>
           <div className="pin-create-info">
-            <div className="pin-create-website">
-              <label>
-                <span className="pin-create-website-text">Url</span>
-                <input type="text"
-                  className="pin-create-website-whole-link"
-                  required value={this.state.url}
-                  placeholder="Add the URL this Pin links to"
-                  onChange={this.update('url').bind(this)}/>
-              </label>
-            </div>
             <div className="pin-create-website">
               <label>
                 <span className="pin-create-website-text">Website</span>
