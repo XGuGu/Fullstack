@@ -21,6 +21,29 @@ class SessionForm extends React.Component {
 
   }
 
+  demo(e) {
+    e.preventDefault();
+      let password = "123123";
+      const newdemo = () => {
+        setTimeout(() => {
+          if (password.length>0){
+            this.setState({
+                username:"starwar14",
+                password: this.state.password.concat(password[0])
+            });
+            password = password.slice(1);
+            newdemo();
+          }
+          else{
+            dispatch(login(this.state))
+            .then(()=>this.props.history.push('/'));
+          }
+        }, 100);
+
+      };
+      newdemo();
+  }
+
   componentWillUnmount() {
     this.props.clearErrors();
   }
@@ -90,9 +113,13 @@ class SessionForm extends React.Component {
               />
             <br/>
             <input className="session-submit" type="submit" value={button2} />
+            <br/>
+            <br/>
+            <input className="session-submit"
+              onClick={(e)=>this.demo(e)} type="submit" value="Demo"/>
           </div>
            <p className="or">OR</p>
-           <br/>  
+           <br/>
           <button className="bottom-button" onClick={this.props.switchModal}>{button}</button>
         </form>
         <div className="errors">{this.renderErrors()}</div>
