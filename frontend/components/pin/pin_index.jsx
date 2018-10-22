@@ -15,6 +15,7 @@ class PinIndex extends React.Component {
 
   render() {
     // debugger
+    
     let createpin;
     if (this.props.currentId != this.props.userId) {
       createpin = (<div className="pin-index-create-broad"></div>);
