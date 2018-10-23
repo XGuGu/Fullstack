@@ -14,6 +14,7 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
+  
   return {
     createPin: (pin, board_id) => dispatch(createPin(pin, board_id)),
     createBoard: board => dispatch(createBoard(board)),
