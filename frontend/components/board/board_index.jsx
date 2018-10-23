@@ -15,7 +15,7 @@ class BoardIndex extends React.Component {
     this.props.requestUser(this.props.currentId);
   }
 
-
+// ewffaf ? eaf : ewaf
   render() {
     // debugger
     let createboard;
@@ -29,16 +29,49 @@ class BoardIndex extends React.Component {
         </div>
       );
     }
+
+    let boards = this.props.boards.filter(board => board.user_id == this.props.currentId);
+    // const boardPins = values(this.props.boards.)
+    // debugger
+
     return (
+      // <img src={window.new_board} className="one-board-img"/>
       <div className="board-index-outer">
         <div className="board-index">
           <div className="sub-boards">
             {createboard}
 
-            {this.props.boards.map((board, idx)=>
+            {boards.map((board, idx)=>
               <div className="one-board" key={idx}>
                 <Link to={`/users/${this.props.currentId}/boards/${board.id}`} className="board-index-one-board-link">
-                  <img src={window.new_board} className="one-board-img"/>
+                    <ul className="board-index-item">
+                      <div className="board-index-grid">
+
+                        <li className="board-index-thumb-0">
+                          <img src={board.pins_belongs_to_this_board[0] ? board.pins_belongs_to_this_board[0].url : window.new_board} />
+                        </li>
+
+                        <li className="board-index-thumb-1">
+                          <img src={board.pins_belongs_to_this_board[1] ? board.pins_belongs_to_this_board[1].url : window.new_board} />
+                        </li>
+
+                        <li className="board-index-thumb-2">
+                          <img src={board.pins_belongs_to_this_board[2] ? board.pins_belongs_to_this_board[2].url : window.new_board} />
+                        </li>
+
+                        <li className="board-index-thumb-3">
+                          <img src={board.pins_belongs_to_this_board[3] ? board.pins_belongs_to_this_board[3].url : window.new_board} />
+                        </li>
+
+                        <li className="board-index-thumb-4">
+                          <img src={board.pins_belongs_to_this_board[4] ? board.pins_belongs_to_this_board[4].url : window.new_board} />
+                        </li>
+
+                        <li className="board-index-thumb-5">
+                          <img src={board.pins_belongs_to_this_board[5] ? board.pins_belongs_to_this_board[5].url : window.new_board} />
+                        </li>
+                      </div>
+                    </ul>
                   <p className="board-index-one-board-name">{board.board_name}</p>
                   <p className="board-index-one-board-pincount">{board.pincount} Pins</p>
                 </Link>

@@ -9,7 +9,8 @@ const mapStateToProps = (state, ownProps) => {
   // debugger
   // want props.match.params.boardId
   return {
-    board: state.entities.boards[ownProps.location.pathname.slice(17)],
+    board: state.entities.boards[parseInt(Object.keys(state.entities.boards)[0])],
+    // board: state.entities.boards[ownProps.location.pathname.slice(17)],
     errors: state.errors.boards,
   };
 };
