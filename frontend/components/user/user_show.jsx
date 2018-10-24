@@ -16,7 +16,7 @@ class UserShow extends React.Component{
   componentDidMount(){
     // debugger
     this.props.requestUser(this.props.userId);
-    this.props.requestAllBoards();
+    this.props.requestUserBoards(this.props.userId);
     this.props.requestUserPins(this.props.userId);
   }
 

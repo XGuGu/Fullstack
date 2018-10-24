@@ -15,6 +15,8 @@ class PinChooseboard extends React.Component {
   }
 
   render() {
+    // debugger
+    let boards = this.props.boards.filter(board => board.user_id == this.props.currentUser.id);
     return (
       <div className="pin-chooseboard-form">
         <div className="pin-chooseboard-first-line">
@@ -28,7 +30,7 @@ class PinChooseboard extends React.Component {
           </div>
           <div className="create-pin-boards-list">
             <div className="pin-chooseboard-board-selection">
-              {this.props.boards.map((board, idx) =>
+              {boards.map((board, idx) =>
                 <div className="pin-chooseboard-one-board" key={idx}>
                   <input type="submit"
                     value={board.board_name}

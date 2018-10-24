@@ -66,9 +66,9 @@ update(e){
         </label>
         <div className="edit-board-line2"></div>
         <br />
-        <button onClick={this.handleclick} className="board-edit-delete-button">Delete</button>
-        <button className="board-edit-cancel-button" onClick={() => this.props.closeModal()}>Cancel</button>
         <input className="board-edit-save-button" type="submit" value='Save' />
+        <button className="board-edit-cancel-button" onClick={() => this.props.closeModal()}>Cancel</button>
+        <button onClick={this.handleclick} className="board-edit-delete-button">Delete</button>
         <div className="board-edit-errors">{this.renderErrors()}</div>
         </form>
       </div>

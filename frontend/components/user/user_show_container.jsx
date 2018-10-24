@@ -4,7 +4,7 @@ import UserShow from './user_show';
 import { requestUser } from '../../actions/user_actions';
 import { requestUserPins } from '../../actions/pin_actions';
 import { requestAllBoards } from '../../actions/board_actions';
-
+import { requestUserBoards } from '../../actions/board_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
@@ -32,6 +32,7 @@ const mapDispatchToProps = dispatch => {
     requestUser: (id) => dispatch(requestUser(id)),
     requestUserPins: (id) => dispatch(requestUserPins(id)),
     requestAllBoards: () => dispatch(requestAllBoards()),
+    requestUserBoards: (userId) => dispatch(requestUserBoards(userId)),
   };
 };
 

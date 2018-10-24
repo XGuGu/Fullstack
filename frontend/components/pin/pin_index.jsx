@@ -15,7 +15,7 @@ class PinIndex extends React.Component {
 
   render() {
     // debugger
-    
+
     let createpin;
     if (this.props.currentId != this.props.userId) {
       createpin = (<div className="pin-index-create-broad"></div>);
@@ -33,6 +33,7 @@ class PinIndex extends React.Component {
     let col4 = [];
     let col5 = [];
     for (var i = 0; i < this.props.pins.length; i++) {
+    // for (var i = 0; i < 12; i++) {
       // debugger
       if (i === 0 && this.props.currentId == this.props.userId) {
         col2.push(this.props.pins[i]);

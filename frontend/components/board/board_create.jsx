@@ -52,8 +52,8 @@ class BoardCreate extends React.Component {
           </label>
           <div className="create-board-line2"></div>
           <br />
-          <button className="board-create-cancel-button" onClick={() => this.props.closeModal()}>Cancel</button>
           <input className="board-create-create-button" type="submit" value='Create' />
+          <button className="board-create-cancel-button" onClick={() => this.props.closeModal()}>Cancel</button>
           <div className="board-create-errors">{this.renderErrors()}</div>
         </form>
       </div>
