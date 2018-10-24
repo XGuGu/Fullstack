@@ -48,27 +48,27 @@ class BoardIndex extends React.Component {
                       <div className="board-index-grid">
 
                         <li className="board-index-thumb-0">
-                          <img src={board.pins_belongs_to_this_board[0] ? board.pins_belongs_to_this_board[0].url : window.new_board} />
+                          <img src={board.pins_belongs_to_this_board[0] ? board.pins_belongs_to_this_board[0].url : window.grey_background} />
                         </li>
 
                         <li className="board-index-thumb-1">
-                          <img src={board.pins_belongs_to_this_board[1] ? board.pins_belongs_to_this_board[1].url : window.new_board} />
+                          <img src={board.pins_belongs_to_this_board[1] ? board.pins_belongs_to_this_board[1].url : window.grey_background} />
                         </li>
 
                         <li className="board-index-thumb-2">
-                          <img src={board.pins_belongs_to_this_board[2] ? board.pins_belongs_to_this_board[2].url : window.new_board} />
+                          <img src={board.pins_belongs_to_this_board[2] ? board.pins_belongs_to_this_board[2].url : window.grey_background} />
                         </li>
 
                         <li className="board-index-thumb-3">
-                          <img src={board.pins_belongs_to_this_board[3] ? board.pins_belongs_to_this_board[3].url : window.new_board} />
+                          <img src={board.pins_belongs_to_this_board[3] ? board.pins_belongs_to_this_board[3].url : window.grey_background} />
                         </li>
 
                         <li className="board-index-thumb-4">
-                          <img src={board.pins_belongs_to_this_board[4] ? board.pins_belongs_to_this_board[4].url : window.new_board} />
+                          <img src={board.pins_belongs_to_this_board[4] ? board.pins_belongs_to_this_board[4].url : window.grey_background} />
                         </li>
 
                         <li className="board-index-thumb-5">
-                          <img src={board.pins_belongs_to_this_board[5] ? board.pins_belongs_to_this_board[5].url : window.new_board} />
+                          <img src={board.pins_belongs_to_this_board[5] ? board.pins_belongs_to_this_board[5].url : window.grey_background} />
                         </li>
                       </div>
                     </ul>

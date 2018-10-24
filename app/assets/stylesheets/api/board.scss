@@ -38,9 +38,11 @@
   width: 300px;
   margin-bottom: 20px;
   margin-top: 20px;
-  margin-left: 12px;
+  // margin-left: 12px;
   margin-right: 12px;
   padding: 8px;
+  position: relative;
+  top: 6px;
 }
 
 .create-board-img {
@@ -51,7 +53,7 @@
 
 .one-board {
   box-sizing:border-box;
-  padding: 8px;
+  padding: 0px;
   margin-bottom: 20px;
   margin-top: 20px;
   margin-left: 12px;
@@ -90,30 +92,78 @@
   text-decoration: none;
 }
 
+.board-index-grid {
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+  will-change: transform;
+  // position: relative;
+  display: flex;
+  // object-fit: cover;
+  // position: absolute;
+}
+
+.board-index-item {
+  padding: 0px;
+}
+
 .board-index-item li {
   list-style-type: none;
 }
 
 .board-index-thumb-0 img {
-  width:30px;
+  width:98.667px;
+  height: 99px;
+  position: relative;
+  overflow: hidden;
+  object-fit: cover;
 }
 
 .board-index-thumb-1 img {
-  width: 30px;
+  width: 98.667px;
+  height: 49.5px;
+  overflow: hidden;
+  object-fit: cover;
+  margin-left: 2px;
+  margin-right: 2px;
+  // margin-bottom: 2px;
 }
 
 .board-index-thumb-2 img {
-  width: 30px;
+  width:98.667px;
+  height: 99px;
+  position: relative;
+  overflow: hidden;
+  object-fit: cover;
 }
 
 .board-index-thumb-3 img {
-  width: 30px;
+  width: 98.667px;
+  height: 99px;
+  overflow: hidden;
+  object-fit: cover;
+  position: relative;
+  right: 300px;
+  top: 101px;
 }
 
 .board-index-thumb-4 img {
-  width: 30px;
+  width: 98.667px;
+  height: 149.5px;
+  overflow: hidden;
+  object-fit: cover;
+  position: relative;
+  right: 298px;
+  top:51px;
 }
 
 .board-index-thumb-5 img {
-  width: 30px;
+  width: 98.667px;
+  height: 99px;
+  overflow: hidden;
+  object-fit: cover;
+  position: relative;
+  right: 296px;
+  top: 101px;
 }
