@@ -7,6 +7,7 @@ Pindup is a web application for the photo lovers, inspired by Pinterest. Users c
 ## Features
 
 * Profiles
+
   * Users can view the boards and pins in their profile page. Users can also have the access to other users' profile page after they logged in.
   * The profile page display all the information belongs to the user. Also all the pins they have pinned.
   * User can create boards and pins in their own profile page.
