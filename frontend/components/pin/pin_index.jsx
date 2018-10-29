@@ -32,6 +32,7 @@ class PinIndex extends React.Component {
     let col3 = [];
     let col4 = [];
     let col5 = [];
+    
     for (var i = 0; i < this.props.pins.length; i++) {
     // for (var i = 0; i < 12; i++) {
       // debugger

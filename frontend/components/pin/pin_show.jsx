@@ -8,6 +8,7 @@ class PinShow extends React.Component {
 
   componentDidMount(){
     // debugger
+    
     this.props.requestPin(this.props.match.params.pinId);
     this.props.requestUserBoards(this.props.currentId);
   }

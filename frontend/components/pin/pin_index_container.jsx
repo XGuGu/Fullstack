@@ -16,6 +16,7 @@ const mapStateToProps = (state, ownProps) => {
 
 
 const mapDispatchToProps = dispatch => {
+  
   return {
     requestUserPins: (id) => dispatch(requestUserPins(id)),
     createPin: pin => dispatch(createPin(pin)),
