@@ -11,7 +11,6 @@ class PinShow extends React.Component {
 
     this.props.requestPin(this.props.match.params.pinId);
     this.props.requestUserBoards(this.props.currentId);
-    
   }
 
   render() {
