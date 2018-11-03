@@ -14,6 +14,7 @@ class PinCreate extends React.Component {
       website_url: '',
     }
     this.onDrop = this.onDrop.bind(this);
+    
   }
 
   onDrop(image){
@@ -23,7 +24,7 @@ class PinCreate extends React.Component {
     // debugger
 
     req.end((err, response) => {
-      
+
       if (err) {
         this.setState({
           url: "https://data.whicdn.com/images/167083528/large.jpg"
