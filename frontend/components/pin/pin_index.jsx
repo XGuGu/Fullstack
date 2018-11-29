@@ -1,10 +1,15 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import Spinner from '../spinner.jsx';
 
 class PinIndex extends React.Component {
   constructor(props) {
     super(props);
     // debugger
+    this.state = {
+      loading: true,
+    }
+    setTimeout( () => this.setState( {loading: false} ), 0);
   }
 
   componentDidMount() {
@@ -15,7 +20,11 @@ class PinIndex extends React.Component {
 
   render() {
     // debugger
-
+    if(this.state.loading) {
+      return (
+        <Spinner state={this.state}/>
+      )
+    }
     let createpin;
     if (this.props.currentId != this.props.userId) {
       createpin = (<div className="pin-index-create-broad"></div>);
@@ -32,7 +41,7 @@ class PinIndex extends React.Component {
     let col3 = [];
     let col4 = [];
     let col5 = [];
-    
+
     for (var i = 0; i < this.props.pins.length; i++) {
     // for (var i = 0; i < 12; i++) {
       // debugger
