@@ -16,9 +16,9 @@ const mapStateToProps = (state, ownProps) => {
 
 
 const mapDispatchToProps = dispatch => {
-  
+
   return {
-    requestUserPins: (id) => dispatch(requestUserPins(id)),
+    requestUserPins: (userId, description) => dispatch(requestUserPins(userId, description)),
     createPin: pin => dispatch(createPin(pin)),
     openModal: modal => dispatch(openModal(modal)),
     requestUserBoards: id => dispatch(requestUserBoards(id)),

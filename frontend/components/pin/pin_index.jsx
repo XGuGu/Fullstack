@@ -9,10 +9,11 @@ class PinIndex extends React.Component {
     this.state = {
       loading: true,
     }
-    setTimeout( () => this.setState( {loading: false} ), 0);
+    setTimeout( () => this.setState( {loading: false} ), 1000);
   }
 
   componentDidMount() {
+    // debugger
     this.props.requestUserPins(this.props.userId);
     this.props.requestUserBoards(this.props.currentId);
   }

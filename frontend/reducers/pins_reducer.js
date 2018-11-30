@@ -6,6 +6,7 @@ const pinsReducer = (state = {}, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_PINS:
+    // debugger
       return action.pins;
     case RECEIVE_PIN:
       return merge({}, state, {[action.pin.id]: action.pin});

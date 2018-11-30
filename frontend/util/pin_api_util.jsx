@@ -1,9 +1,14 @@
-export const fetchAllPins = (userId) => {
+export const fetchAllPins = (userId, description) => {
+  // debugger
   return $.ajax({
     method: 'GET',
     url: '/api/pins',
+    // data: {
+    //   userId   shangmian shi userId
+    // }
     data: {
-      userId
+      userId,
+      description,
     }
   });
 };

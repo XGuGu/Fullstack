@@ -4,6 +4,9 @@ class Api::PinsController < ApplicationController
     # debugger
     if params[:userId]
       @pins = User.find(params[:userId]).pins
+    elsif params[:description]
+      query_string = "%#{params[:description]}%".downcase
+      @pins = Pin.where("LOWER(description) LIKE ?", query_string)
     else
       @pins = Pin.all
     end

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Redirect, Link, NavLink } from 'react-router-dom';
+import SearchBarContainer from '../search_bar/searchBarContainer';
 
 class navBar extends React.Component {
   constructor(props) {
@@ -7,6 +8,7 @@ class navBar extends React.Component {
   }
 
   componentDidMount(){
+    debugger
     // this.props.requestUser(this.props.currentId);
   }
 
@@ -21,6 +23,7 @@ class navBar extends React.Component {
     return (
       <div className="navbar">
         <NavLink to="/" ><img className="navlogo" src={window.logo}/></NavLink>
+        <SearchBarContainer />
         <div className="rightnav">
           <NavLink exact to="/" className='homelink'>Home</NavLink>
 
