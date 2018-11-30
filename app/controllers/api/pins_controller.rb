@@ -19,14 +19,30 @@ class Api::PinsController < ApplicationController
 
   def create
     # debugger
-    @pin = Pin.new(pin_params)
-    @pin.author_id = current_user.id
-    if @pin.save
-      Pinboard.create!({pin_id: @pin.id, board_id: params[:boardId]})
+    if pin_params[:author_id]
+      Pinboard.create!({pin_id: params[:pin][:id], board_id: params[:boardId]})
       render :show
     else
-      render json: @pin.errors.full_messages, status: 422
+      @pin = Pin.new(pin_params)
+      @pin.author_id = current_user.id
+      if @pin.save
+        Pinboard.create!({pin_id: @pin.id, board_id: params[:boardId]})
+        render :show
+      else
+        render json: @pin.errors.full_messages, status: 422
+      end
     end
+
+    # @pin = Pin.new(pin_params)
+    # if !@pin.author_id
+    #   @pin.author_id = current_user.id
+    # end
+    # if @pin.save
+    #   Pinboard.create!({pin_id: @pin.id, board_id: params[:boardId]})
+    #   render :show
+    # else
+    #   render json: @pin.errors.full_messages, status: 422
+    # end
   end
 
   def update
