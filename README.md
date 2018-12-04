@@ -40,6 +40,8 @@ Because we do not want to see the session form after user logged in. I used moda
 
 For both of them, I use switch to handle which form to display.
 
+<img src="app/assets/images/modal.png" width=500>
+
 ```javascript
   function Modal({modal, closeModal, loggedIn}) {
     if (loggedIn) {
@@ -88,6 +90,8 @@ const Modal = (props) => {
 
 When user pinned picture belongs to other user, it will increment the likes of the pin. I handle the problem in the backend by creating new Pinboard object in the join table.
 
+<img src="app/assets/images/likes.png" width=700>
+
 ```ruby
 def create
   if pin_params[:author_id]
@@ -111,6 +115,8 @@ end
 
 The search feature is implemented in SearchBar component and in backend with the Active Record. If user enter the description in the search bar, the frontend will send fetch Pins query with the object "description". It will go to the controller and Active Record will handle the "description" data and using SQL query to find all matched Pins.
 
+<img src="app/assets/images/search.png" width=700>
+
 ```ruby
 def index
   if params[:userId]
@@ -133,6 +139,8 @@ export const mdp = ({undefined, description}) => ({
 ### Image Upload
 
 User is able to upload images from their own devices onto Pindup. This is implemented by react-dropzone. The uploaded images will also be rendered onto the feed page.
+
+<img src="app/assets/images/upload.png" width=500>
 
 ```javascript
 <ReactDropzone
