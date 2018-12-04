@@ -29,7 +29,7 @@ Pindup is made with rails in the backend and react/redux for the frontend. The d
 ### User Authentication
 
 <center>
-<img src="app/assets/images/login.png" width=100 height=100>
+<img src="app/assets/images/login.png" width=500>
 </center>
 
 ### Modals
