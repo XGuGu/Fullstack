@@ -3,13 +3,18 @@
 
 Pindup is a web application for the photo lovers, inspired by Pinterest. Users can find pictures they like in the feed page or from other users' pin boards. Users can also save or upload the pictures they like to the board they have created.
 
+## Technologies
 
-## Features
+Pindup is made with rails in the backend and react/redux for the frontend. The data is housed in a Postgresl Sql database.
+
+## Key Features
 
 * Profiles
   * Users can view the boards and pins in their profile page. Users can also have the access to other users' profile page after they logged in.
-  * The profile page display all the information belongs to the user. Also all the pins they have pinned.
+  * The profile page display all the information belongs to the user. User can also find all the pins they have pinned and uploaded.
   * User can create boards and pins in their own profile page.
+* Search
+  * User can search pins in the feed page by the description of pins.
 * Modal
   * Modal is used for Log In/Sign Up page and the form page in this application.
 * Feed
@@ -18,6 +23,8 @@ Pindup is a web application for the photo lovers, inspired by Pinterest. Users c
   * User can save Pins from the feed page.
 * Likes
   * Users will increment the likes for the Pin after they save it to their own board.
+
+## Technical Implementation
 
 ### Modals
 
@@ -70,11 +77,28 @@ const Modal = (props) => {
     return null;
   }
 ```
-### Future features
-The project was designed and built in about 80 hours of work. So I would love to update more features in the future.
 
-* User Following:
-  Users will be able to follow other users.I will use a join table to implement this.
+### Likes
 
-* Search:
-  Users will be able to search for the pins in the nav bar by the description of the pins.
+When user pinned picture belongs to other user, it will increment the likes of the pin. I handle the problem in the backend by creating new object in the join table.
+
+```ruby
+def create
+  if pin_params[:author_id]
+    Pinboard.create!({pin_id: params[:pin][:id], board_id: params[:boardId]})
+    render :show
+  else
+    @pin = Pin.new(pin_params)
+    @pin.author_id = current_user.id
+    if @pin.save
+      Pinboard.create!({pin_id: @pin.id, board_id: params[:boardId]})
+      render :show
+    else
+      render json: @pin.errors.full_messages, status: 422
+    end
+  end
+end
+
+```
+
+### Search
