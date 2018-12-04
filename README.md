@@ -26,6 +26,12 @@ Pindup is made with rails in the backend and react/redux for the frontend. The d
 
 ## Technical Implementation
 
+### User Authentication
+
+<center>
+<img src="app/assets/images/login.png" width=100 height=100>
+</center>
+
 ### Modals
 
 Every form in Pindup is displayed by the modal. Including session form, pin/board create form, pin/board edit form, pin save form.
@@ -80,7 +86,7 @@ const Modal = (props) => {
 
 ### Likes
 
-When user pinned picture belongs to other user, it will increment the likes of the pin. I handle the problem in the backend by creating new object in the join table.
+When user pinned picture belongs to other user, it will increment the likes of the pin. I handle the problem in the backend by creating new Pinboard object in the join table.
 
 ```ruby
 def create
@@ -102,3 +108,35 @@ end
 ```
 
 ### Search
+
+The search feature is implemented in SearchBar component and in backend with the Active Record. If user enter the description in the search bar, the frontend will send fetch Pins query with the object "description". It will go to the controller and Active Record will handle the "description" data and using SQL query to find all matched Pins.
+
+```ruby
+def index
+  if params[:userId]
+    @pins = User.find(params[:userId]).pins
+  elsif params[:description]
+    query_string = "%#{params[:description]}%".downcase
+    @pins = Pin.where("LOWER(description) LIKE ?", query_string)
+  else
+    @pins = Pin.all
+  end
+end
+```
+
+```javascript
+export const mdp = ({undefined, description}) => ({
+  fetchPins: (undefined, description) => dispatch(requestUserPins(undefined, description))
+});
+```
+
+### Image Upload
+
+User is able to upload images from their own devices onto Pindup. This is implemented by react-dropzone. The uploaded images will also be rendered onto the feed page.
+
+```javascript
+<ReactDropzone
+  onDrop={this.onDrop} className="dropzone" >
+  {this.preview()}
+</ReactDropzone>
+```
